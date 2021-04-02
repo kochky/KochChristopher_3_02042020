@@ -1,0 +1,46 @@
+$color-primary:#9356DC ;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+
+$font-primary:"Roboto", sans-serif;
+$font-title:'Shrikhand', cursive;
+
+
+.body {
+    font-family: $font-primary;
+    margin:auto;
+    
+}
+
+.logo , h1, h2, h3 {
+    font-family: $font-title;
+}
+
+a {
+    text-decoration:none;
+    color:black 
+} 
+li {
+    list-style: none;
+}
+
+
+
+.logo {
+text-align: center;
+font-size: 2rem;
+}
+
+#location {
+    &__ville {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+        &__icone {
+            margin-right:40px;
+        }
+    }
+
+
+}

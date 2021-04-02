@@ -1,0 +1,20 @@
+{
+  "name": "kochchristopher_3_02042020",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kochky/KochChristopher_3_02042020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kochky/KochChristopher_3_02042020/issues"
+  },
+  "homepage": "https://github.com/kochky/KochChristopher_3_02042020#readme",
+  "description": ""
+}
