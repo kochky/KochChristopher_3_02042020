@@ -2,18 +2,15 @@ $color-primary:#9356DC ;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 
-$font-primary:"Roboto", sans-serif;
+$font-primary:'Roboto', sans-serif;
 $font-title:'Shrikhand', cursive;
 
 
-.body {
-    font-family: $font-primary;
+body {
+    font-family:$font-primary;
     margin:auto;
+    font-size:100%;
     
-}
-
-.logo , h1, h2, h3 {
-    font-family: $font-title;
 }
 
 a {
@@ -24,23 +21,232 @@ li {
     list-style: none;
 }
 
+h1 {
+    font-weight:900;
+}
+h2{
+    font-size:18px;
+    font-weight:900;
+}
+
 
 
 .logo {
 text-align: center;
 font-size: 2rem;
+font-family: $font-title;
+height:1.5rem;
 }
 
-#location {
-    &__ville {
+.location {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding-bottom:3rem;
+    margin-bottom:3rem;
+    
+    
+        &__h1 {
+            width:65%;
+            padding-top:1.5rem;
+            height:2rem;
+            text-align: center;
+        }
+        &__p {
+            padding:0px 5px;
+            width:75%;
+            text-align: center;
+            margin-bottom:2rem;
+            color:#7d7d7d;
+        }
+        &__button {
+            border-radius: 2rem;
+            height:2.5rem;
+            background: linear-gradient($color-secondary,$color-primary);
+            color:white;
+            border:none;
+            padding:0rem 1.5rem;
+            height:2.5rem;
+            
+        }
+        &__ville {
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#eaeaea;
+            background: linear-gradient(to top, #eaeaea,95%, #cfcfcf);
+    
+            &__p {
+             margin-left:1rem;
+             font-weight: 700;
+             }
+        }
+}
+
+.fonctionnement {
+    display:flex;
+    flex-wrap: wrap;
+
+        &__h1 {
+            padding-bottom:1rem;
+            margin-right:10rem;
+            margin-left:2rem;
+        }
+        &__list {
+            background-color: #f6f6f6;
+            display:flex;
+            align-items: center;
+            height:4.5rem;
+            position:relative;
+            border-radius:1rem;
+            margin-bottom:1.5rem;
+            box-shadow: 0rem 0.1rem 0.5rem lightgrey;
+            width:325px;
+            margin-right: 1.5rem;
+            margin-left:1.5rem;
+            &__p{
+                font-weight: 900;
+            }
+            &--fondcolor {
+                background-color:#f5edff ;
+            }
+
+            &__étape {
+                margin-right:1rem;
+                background-color: $color-primary;
+                height:1.5rem;
+                border-radius:1.5rem;
+                width:1.5rem;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+                position:relative;
+                left:-0.75rem
+                 
+            }
+
+            &__logo {
+                margin-right:1rem;
+                
+                &--gris{
+                    color: #7e7e7e;
+                }
+                &--primarycolor {
+                    color:$color-primary
+                } 
+            
+            }
+        }
+}
+
+.restaurants {
+    margin-top:2rem;
+    padding:2rem 1.5rem 3rem 1.5rem;
+    background-color: #f6f6f6 ;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__titre {
+        width:100%
+    }
+    &__présentation {
         display:flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width:335px;
+        height:250px;
+        border-radius: 15px;
+        margin-bottom: 2rem;
         
-        &__icone {
-            margin-right:40px;
+        &__nouveau {
+            color:#008766;
+            background-color: $color-tertiary;
+            width:min-content;
+            width:80px;
+            height:30px;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            margin-right:10px;
+            
+            
+
+        }
+
+        &__nom{
+            background-color: white;
+            width:335px;
+            height:75px;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 0 0 15px 15px;
+            margin-bottom:-1px;
+            &--coeur_vide:hover{
+                display:none;
+            }            
+            &--coeur_vide:hover + .--coeur_rempli {
+                display:block;
+            }
+            
+        
         }
     }
-
-
 }
+.--coeur_rempli {
+    display:none;
+    color:$color-secondary;
+}
+
+#lapalettedugoût {
+    background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+}
+#lanoteenchantée {
+    background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-size: cover;
+}
+#àlafrançaise {
+    background:url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+}
+#ledélicedessens {
+    background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-size: cover;
+}
+
+.footer {
+    background-color:#353535;
+    color:white;
+    padding-left:1.25rem;
+    padding-top:0.5rem;
+    padding-bottom:1.25rem;
+    display:flex;
+    flex-direction: column;
+    
+        &__ul {
+            padding:0;
+            display:flex;
+            flex-wrap:wrap;
+        }
+        &__logo {
+    
+            font-size: 1.25rem;
+            font-family: $font-title;
+            height:1.5rem;
+        }
+        &__ul__lien {
+            color:white;
+
+            &__li {
+                margin-bottom:0.75rem;
+                width:375px;
+            }
+        
+        }
+}
+

@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a4b46c7bcb.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -16,86 +16,88 @@
             <p class=logo>ohmyfood</p>  
             
         </header>
-        <section id=location>
-            <div id=location__ville><i class="fas fa-map-marker-alt" location__ville__icone></i><p>Paris,Belleville</p></div>
-            <h1>Réservez le menu qui vous convient
+        <section class=location>
+            <div class=location__ville><i class="fas fa-map-marker-alt"></i><p class=location__ville__p>Paris,Belleville</p></div>
+            <h1 class=location__h1>Réservez le menu qui vous convient
             </h1>
-            <p>Découvrez des restaurants d'exception,séléctionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <p class=location__p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button class=location__button>Explorer nos restaurants</button>
 
         </section>
-        <section id=fonctionnement>
-            <div> 
-                <div class=fonctionnement_étape>1 
+        <section class=fonctionnement>
+            <h1 class=fonctionnement__h1>Fonctionnement</h1>
+            <div class=fonctionnement__list> 
+                <div class=fonctionnement__list__étape>1 
                 </div>
-                <i class="fas fa-mobile-alt"></i>
-                <p>Choisissez un restaurant</p>
+                <i class="fas fa-mobile-alt fonctionnement__list__logo fonctionnement__list__logo--gris"></i>
+                <p class=fonctionnement__list__p>Choisissez un restaurant</p>
             </div>
-            <div>
-                <div class=fonctionnement_étape>2
+            <div class=fonctionnement__list>
+                <div class=fonctionnement__list__étape>2
                 </div>
-                <i class="fas fa-list"></i>
-                <p>Composez votre menu</p>
+                <i class="fas fa-list fonctionnement__list__logo  fonctionnement__list__logo--gris" ></i>
+                <p class=fonctionnement__list__p>Composez votre menu</p>
             </div>
-            <div>
-                <div class=fonctionnement_étape>3
+            <div class="fonctionnement__list fonctionnement__list--fondcolor">
+                <div class=fonctionnement__list__étape >3
                 </div>
-                <i class="fas fa-store"></i>
-                <p>Dégustez au restaurant</p>
+                <i class="fas fa-store fonctionnement__list__logo  fonctionnement__list__logo--primarycolor"></i>
+                <p class=fonctionnement__list__p>Dégustez au restaurant</p>
             </div>
 
 
 
         </section>
-        <section id=Restaurants>
-            <div>
-                <p class=nouveau>Nouveau</p>
-                <div>
-                    <h2>La palette du goût</h2>
-                    <p>Ménilmontant</p>
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
+        <section class=restaurants>
+            <h1 class=restaurants__titre>Restaurants</h1>
+            <div class=restaurants__présentation id=lapalettedugoût>
+                <p class=restaurants__présentation__nouveau>Nouveau</p>
+                <div class=restaurants__présentation__nom>
+                    <div><h2>La palette du goût</h2>
+                    <p>Ménilmontant</p></div>
+                    <i class="far fa-heart fa-lg restaurants__présentation__nom--coeur_vide"></i>
+                    <i class="fas fa-heart fa-lg --coeur_rempli"></i>
 
                 </div>
             </div>
-            <div>
-                <p class=nouveau>Nouveau</p>
-                <div>
-                    <h2>La note enchantée</h2>
-                    <p>Charonne</p>
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
+            <div class=restaurants__présentation id=lanoteenchantée>
+                <p class=restaurants__présentation__nouveau>Nouveau</p>
+                <div class=restaurants__présentation__nom>
+                    <div><h2>La note enchantée</h2>
+                    <p>Charonne</p></div>
+                    <i class="far fa-heart fa-lg restaurants__présentation__nom--coeur_vide"></i>
+                    <i class="fas fa-heart fa-lg --coeur_rempli"></i>
 
                 </div>
             </div>
-            <div>
-                <p class=nouveau>Nouveau</p>
-                <div>
-                    <h2>A la française</h2>
-                    <p>Cité Rouge</p>
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
+            <div class=restaurants__présentation id=àlafrançaise>
+                <p class=restaurants__présentation__nouveau>Nouveau</p>
+                <div class=restaurants__présentation__nom>
+                    <div><h2>A la française</h2>
+                    <p>Cité Rouge</p></div>
+                    <i class="far fa-heart fa-lg restaurants__présentation__nom--coeur_vide"></i>
+                    <i class="fas fa-heart fa-lg --coeur_rempli"></i>
 
                 </div>
             </div>
-            <div>
-                <p class=nouveau>Nouveau</p>
-                <div>
-                    <h2>Le délice des sens</h2>
-                    <p>Folie-Méricourt</p>
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
+            <div class=restaurants__présentation id=ledélicedessens>
+                <p class=restaurants__présentation__nouveau>Nouveau</p>
+                <div class=restaurants__présentation__nom>
+                    <div><h2>Le délice des sens</h2>
+                    <p>Folie-Méricourt</p></div>
+                    <i class="far fa-heart fa-lg restaurants__présentation__nom--coeur_vide"></i>
+                    <i class="fas fa-heart fa-lg --coeur_rempli"></i>
 
                 </div>
             </div>
         </section>
-        <footer>
-            <p class=logo>ohmyfood</p>
-            <ul>
-                <a href=""><li><i class="fas fa-utensils"></i> Proposer un restaurant</li></a>
-                <a href=""><li><i class="fas fa-hands-helping"></i> Devenir partenaire</li></a>
-                <a href=""><li>Mentions légales</li></a>
-                <a href=""></a><li>Contact</li></a>
+        <footer class=footer>
+            <p class=footer__logo>ohmyfood</p>
+            <ul class=footer__ul>
+                <a class=footer__ul__lien href=""><li class=footer__ul__lien__li><i class="fas fa-utensils">&nbsp; &nbsp;</i> <b>Proposer un restaurant</b></li></a>
+                <a class=footer__ul__lien href=""><li class=footer__ul__lien__li><i class="fas fa-hands-helping">&nbsp;</i> <b>Devenir partenaire</b></li></a>
+                <a class=footer__ul__lien href=""><li class=footer__ul__lien__li>Mentions légales</li></a>
+                <a class=footer__ul__lien href="mailto:"><li class=footer__ul__lien__li>Contact</li></a>
             </ul>
         </footer>
 
