@@ -4,6 +4,11 @@ body {
   margin: auto;
   font-size: 100%;
 }
+@media screen and (min-width: 769px) {
+  body {
+    width: 60%;
+  }
+}
 
 a {
   text-decoration: none;
@@ -79,7 +84,7 @@ h2 {
 }
 .fonctionnement__h1 {
   padding-bottom: 1rem;
-  margin-right: 10rem;
+  margin-right: 5rem;
   margin-left: 2rem;
 }
 .fonctionnement__list {
@@ -124,6 +129,15 @@ h2 {
   color: #9356DC;
 }
 
+.displaynone {
+  display: none;
+}
+
+.--coeur_rempli {
+  display: none;
+  color: #FF79DA;
+}
+
 .restaurants {
   margin-top: 2rem;
   padding: 2rem 1.5rem 3rem 1.5rem;
@@ -161,21 +175,25 @@ h2 {
   width: 335px;
   height: 75px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-radius: 0 0 15px 15px;
   margin-bottom: -1px;
+}
+.restaurants__présentation__nom__texte {
+  height: 75px;
+  padding-left: 15px;
+  padding-top: 20px;
+  line-height: 10px;
+}
+.restaurants__présentation__nom__texte ~ div {
+  margin-right: 25px;
 }
 .restaurants__présentation__nom--coeur_vide:hover {
   display: none;
 }
 .restaurants__présentation__nom--coeur_vide:hover + .--coeur_rempli {
   display: block;
-}
-
-.--coeur_rempli {
-  display: none;
-  color: #FF79DA;
 }
 
 #lapalettedugoût {

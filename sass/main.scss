@@ -10,6 +10,9 @@ body {
     font-family:$font-primary;
     margin:auto;
     font-size:100%;
+    @media screen and (min-width:769px){
+        width:60%;
+    }
     
 }
 
@@ -91,7 +94,7 @@ height:1.5rem;
 
         &__h1 {
             padding-bottom:1rem;
-            margin-right:10rem;
+            margin-right:5rem;
             margin-left:2rem;
         }
         &__list {
@@ -141,7 +144,13 @@ height:1.5rem;
             }
         }
 }
-
+.displaynone {
+    display:none
+}
+.--coeur_rempli {
+    display:none;
+    color:$color-secondary;
+}
 .restaurants {
     margin-top:2rem;
     padding:2rem 1.5rem 3rem 1.5rem;
@@ -182,25 +191,29 @@ height:1.5rem;
             width:335px;
             height:75px;
             display:flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             border-radius: 0 0 15px 15px;
             margin-bottom:-1px;
+            &__texte {
+                height:75px;
+                padding-left:15px;
+                padding-top:20px;
+                line-height: 10px;   
+            }
+            &__texte ~ div{
+              margin-right:25px;  
+            }
             &--coeur_vide:hover{
-                display:none;
+                display:none;  
             }            
             &--coeur_vide:hover + .--coeur_rempli {
                 display:block;
             }
-            
-        
         }
     }
 }
-.--coeur_rempli {
-    display:none;
-    color:$color-secondary;
-}
+
 
 #lapalettedugoût {
     background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -232,6 +245,7 @@ height:1.5rem;
             padding:0;
             display:flex;
             flex-wrap:wrap;
+            
         }
         &__logo {
     
