@@ -1,7 +1,8 @@
 @charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0;
   font-size: 100%;
 }
 @media screen and (min-width: 769px) {
@@ -25,12 +26,56 @@ h1 {
 
 h2 {
   font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 18px;
   font-weight: 900;
+}
+
+button {
+  border-radius: 2rem;
+  height: 2.5rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border: none;
+  padding: 0rem 1.5rem;
+  height: 2.5rem;
+  box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+span {
+  font-weight: 900;
+}
+
+.--white {
+  color: white;
+}
+
+.ligne {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  border: none;
+}
+
+.header {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header__flèche {
+  margin-left: 25px;
+  margin-right: 65px;
 }
 
 .logo {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Shrikhand", cursive;
   height: 1.5rem;
 }
@@ -41,7 +86,7 @@ h2 {
   align-items: center;
   background-color: #f6f6f6;
   padding-bottom: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .location__h1 {
   width: 65%;
@@ -50,7 +95,7 @@ h2 {
   text-align: center;
 }
 .location__p {
-  padding: 0px 5px;
+  margin: 25px 5px;
   width: 75%;
   text-align: center;
   margin-bottom: 2rem;
@@ -81,9 +126,10 @@ h2 {
 .fonctionnement {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 0rem;
 }
 .fonctionnement__h1 {
-  padding-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-right: 5rem;
   margin-left: 2rem;
 }
@@ -240,7 +286,96 @@ h2 {
 }
 .footer__ul__lien__li {
   margin-bottom: 0.75rem;
-  width: 375px;
+  margin-right: 100px;
+}
+
+#restaurant {
+  width: 100%;
+  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) no-repeat;
+  background-size: contain;
+  background-position: top;
+  padding-top: 220px;
+}
+
+.menu {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 30px;
+  padding-bottom: 60px;
+}
+.menu__titre {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-family: "Shrikhand", cursive;
+  padding: 0 40px 0 15px;
+}
+.menu__cat {
+  box-sizing: border-box;
+  line-height: 0px;
+  margin: 30px 1440px 14px 20px;
+}
+.menu__plat {
+  box-sizing: border-box;
+  margin: 0px 15px 15px 10px;
+  width: 350px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0rem 0.1rem 0.5rem lightgrey;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.menu__plat__div {
+  height: 70px;
+  line-height: 10px;
+  margin-left: 10px;
+  width: 210px;
+  flex-grow: 2;
+}
+.menu__plat__div__description {
+  padding-top: 3px;
+  display: block;
+  height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.menu__plat__div__nom {
+  white-space: nowrap;
+}
+.menu__plat__prix {
+  width: 70px;
+  padding: 40px 0px 0 0px;
+  text-align: center;
+}
+.menu__plat__check {
+  height: 70px;
+  background-color: #99E2D0;
+  width: 60px;
+  border-radius: 0 15px 15px 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.menu__plat:hover .menu__plat__check {
+  display: flex;
+}
+.menu__button {
+  display: block;
+  margin: auto;
+  width: 185px;
+  height: 50px;
+}
+
+.espace_menu {
+  margin-bottom: 45px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */
