@@ -68,11 +68,117 @@ span {
   border: none;
 }
 
+/*Chargement à l'arrivée de la page web*/
 .chargement {
   display: none;
-  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  .chargement {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: #99E2D0;
+    z-index: 3;
+    top: 0px;
+    position: absolute;
+    animation: clear 3s;
+    animation-fill-mode: forwards;
+  }
 }
 
+@keyframes clear {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.animation {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+  margin: 0 auto;
+  margin-top: 30vh;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+
+.loader {
+  color: #ffffff;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 155px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: "";
+}
+
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #99E2D0;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #99E2D0;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* fin animation*/
 .header {
   height: 65px;
   display: flex;
