@@ -12,7 +12,7 @@ body {
     padding:0;
     font-size:100%;
     @media screen and (min-width:769px){
-        width:60%;
+        width:50%;
     }
     
 }
@@ -49,6 +49,10 @@ button {
             height:2.5rem;
             box-shadow:0px 5px 14px 0px rgba(0,0,0,0.3);
             cursor:pointer;
+     &:hover {
+        background: linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
+        box-shadow:1px 10px 28px 1px rgba(0,0,0,0.3);
+        }      
 }
 span {
     font-weight:900;
@@ -60,12 +64,13 @@ span {
     width:40px;
     height:3px;
     background-color:$color-tertiary;
-    border:none;
-
-
-    
-    
+    border:none;    
 }
+.chargement {
+    display:none;
+    position:absolute;   
+}
+
 .header {
     height:65px;
     display:flex;
@@ -190,13 +195,8 @@ height:1.5rem;
             }
         }
 }
-.displaynone {
-    display:none
-}
-.--coeur_rempli {
-    display:none;
-    color:$color-secondary;
-}
+
+
 .restaurants {
     margin-top:2rem;
     padding:2rem 1.5rem 3rem 1.5rem;
@@ -230,6 +230,7 @@ height:1.5rem;
         }
 
         &__nom{
+        
             background-color: white;
             width:335px;
             height:75px;
@@ -241,24 +242,37 @@ height:1.5rem;
             &__texte {
                 height:75px;
                 padding-left:15px;
-                padding-top:20px;
+                padding-top:0px;
                 line-height: 10px;   
             }
-            &__texte ~ div{
-              margin-right:25px;  
+            &__texte + div{
+              margin-right:45px;  
             }
-            &--coeur_vide:hover{
-                display:none;  
-            }            
-            &--coeur_vide:hover + .--coeur_rempli {
-                display:block;
-            }
-            &--coeur_vide:hover + .restaurants__présentation__nom__texte{
-            
+            &--coeur_vide {
+                position:absolute;
+                z-index:2; 
+                top:-10px;
+                         
+                &:hover + .--coeur_rempli {
+                    opacity:1
+                }
             }
         }
-
     }
+}
+
+.--coeur_rempli {
+    position:absolute;
+    color:$color-secondary;
+    opacity:0;
+    transition:opacity 500ms;
+    z-index:1;
+    top:-10px; 
+    
+}
+.logo_coeur {
+    position:relative;
+    
 }
 
 
@@ -342,7 +356,9 @@ height:1.5rem;
     background-position:top;
     padding-top:220px;
 }
-
+.logo_coeur {
+    position:relative;
+}
 .menu {
     box-sizing: border-box;
     width:100%;
@@ -361,6 +377,7 @@ height:1.5rem;
         font-family: $font-title;
         padding: 0 40px 0 15px;
         padding-left:20px;
+       
         
     }
     &__cat {
@@ -439,3 +456,4 @@ height:1.5rem;
     display:flex;
     flex-wrap: wrap;
 }
+

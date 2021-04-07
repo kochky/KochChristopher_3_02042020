@@ -7,7 +7,7 @@ body {
 }
 @media screen and (min-width: 769px) {
   body {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -48,6 +48,10 @@ button {
   box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+button:hover {
+  background: linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
+  box-shadow: 1px 10px 28px 1px rgba(0, 0, 0, 0.3);
+}
 
 span {
   font-weight: 900;
@@ -62,6 +66,11 @@ span {
   height: 3px;
   background-color: #99E2D0;
   border: none;
+}
+
+.chargement {
+  display: none;
+  position: absolute;
 }
 
 .header {
@@ -177,15 +186,6 @@ span {
   color: #9356DC;
 }
 
-.displaynone {
-  display: none;
-}
-
-.--coeur_rempli {
-  display: none;
-  color: #FF79DA;
-}
-
 .restaurants {
   margin-top: 2rem;
   padding: 2rem 1.5rem 3rem 1.5rem;
@@ -231,18 +231,34 @@ span {
 .restaurants__présentation__nom__texte {
   height: 75px;
   padding-left: 15px;
-  padding-top: 20px;
+  padding-top: 0px;
   line-height: 10px;
 }
-.restaurants__présentation__nom__texte ~ div {
-  margin-right: 25px;
+.restaurants__présentation__nom__texte + div {
+  margin-right: 45px;
 }
-.restaurants__présentation__nom--coeur_vide:hover {
-  display: none;
+.restaurants__présentation__nom--coeur_vide {
+  position: absolute;
+  z-index: 2;
+  top: -10px;
 }
 .restaurants__présentation__nom--coeur_vide:hover + .--coeur_rempli {
-  display: block;
+  opacity: 1;
 }
+
+.--coeur_rempli {
+  position: absolute;
+  color: #FF79DA;
+  opacity: 0;
+  transition: opacity 500ms;
+  z-index: 1;
+  top: -10px;
+}
+
+.logo_coeur {
+  position: relative;
+}
+
 #lapalettedugoût {
   background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
@@ -320,6 +336,10 @@ span {
   background-size: contain;
   background-position: top;
   padding-top: 220px;
+}
+
+.logo_coeur {
+  position: relative;
 }
 
 .menu {
