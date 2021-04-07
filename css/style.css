@@ -243,7 +243,6 @@ span {
 .restaurants__présentation__nom--coeur_vide:hover + .--coeur_rempli {
   display: block;
 }
-
 #lapalettedugoût {
   background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
@@ -332,13 +331,14 @@ span {
 }
 .menu__titre {
   box-sizing: border-box;
-  width: 100%;
+  width: 355px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
   font-family: "Shrikhand", cursive;
   padding: 0 40px 0 15px;
+  padding-left: 20px;
 }
 .menu__cat {
   box-sizing: border-box;
@@ -369,10 +369,17 @@ span {
   height: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .menu__plat__div__nom {
+  text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  height: 20px;
+  padding: 0;
+  margin: 10px 0 0 0;
+  line-height: normal;
 }
 .menu__plat__prix {
   width: 70px;
@@ -396,10 +403,10 @@ span {
   margin: auto;
   width: 185px;
   height: 50px;
+  margin-top: 30px;
 }
 
 .espace_menu {
-  margin-bottom: 45px;
   display: flex;
   flex-wrap: wrap;
 }

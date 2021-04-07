@@ -253,7 +253,11 @@ height:1.5rem;
             &--coeur_vide:hover + .--coeur_rempli {
                 display:block;
             }
+            &--coeur_vide:hover + .restaurants__présentation__nom__texte{
+            
+            }
         }
+
     }
 }
 
@@ -349,13 +353,15 @@ height:1.5rem;
     
     &__titre {
         box-sizing: border-box;
-        width:100%;
+        width:355px;
         display:flex;
         justify-content: space-between;
         align-items: center;
         font-size: 1rem;
         font-family: $font-title;
         padding: 0 40px 0 15px;
+        padding-left:20px;
+        
     }
     &__cat {
         box-sizing: border-box;
@@ -386,10 +392,17 @@ height:1.5rem;
                 height:20px;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                overflow-x: hidden;
+                overflow: hidden;
             }
             &__nom {
+                text-overflow: ellipsis;
                 white-space: nowrap;
+                overflow: hidden;
+                display:block;
+                height:20px;
+                padding:0;
+                margin:10px 0 0 0;
+                line-height: normal;
             }
         }
 
@@ -397,6 +410,7 @@ height:1.5rem;
             width:70px;
             padding: 40px 0px 0 0px;
             text-align: center;
+           
         }
         &__check {
             height:70px;
@@ -416,12 +430,12 @@ height:1.5rem;
         margin:auto;
         width:185px;
         height:50px;
+        margin-top:30px;
         
     }
 }
 
 .espace_menu {
-    margin-bottom: 45px;
     display:flex;
     flex-wrap: wrap;
 }
