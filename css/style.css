@@ -57,13 +57,8 @@ span {
   font-weight: 900;
 }
 
-.--white {
+.white {
   color: white;
-}
-
-.--spin {
-  transform: rotate(-360deg);
-  transition: transform 500ms ease-in-out;
 }
 
 .ligne {
@@ -71,6 +66,8 @@ span {
   height: 3px;
   background-color: #99E2D0;
   border: none;
+  align-items: left;
+  margin-left: 0;
 }
 
 /*Chargement à l'arrivée de la page web*/
@@ -126,8 +123,6 @@ span {
   width: 10em;
   height: 10em;
   box-shadow: inset 0 0 0 1em;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
 
@@ -144,9 +139,7 @@ span {
   border-radius: 10.2em 0 0 10.2em;
   top: -0.1em;
   left: -0.1em;
-  -webkit-transform-origin: 5.1em 5.1em;
   transform-origin: 5.1em 5.1em;
-  -webkit-animation: load2 2s infinite ease 1.5s;
   animation: load2 2s infinite ease 1.5s;
 }
 
@@ -157,29 +150,15 @@ span {
   border-radius: 0 10.2em 10.2em 0;
   top: -0.1em;
   left: 4.9em;
-  -webkit-transform-origin: 0.1em 5.1em;
   transform-origin: 0.1em 5.1em;
-  -webkit-animation: load2 2s infinite ease;
   animation: load2 2s infinite ease;
 }
 
-@-webkit-keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 @keyframes load2 {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -364,11 +343,11 @@ span {
   z-index: 2;
   top: -10px;
 }
-.restaurants__présentation__nom--coeur_vide:hover + .--coeur_rempli {
+.restaurants__présentation__nom--coeur_vide:hover + .coeur_rempli {
   opacity: 1;
 }
 
-.--coeur_rempli {
+.coeur_rempli {
   position: absolute;
   color: #FF79DA;
   opacity: 0;
@@ -590,12 +569,16 @@ span {
   transform: scaleX(0);
   transform-origin: 100% 50%;
 }
+.menu__plat__check--spin {
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+}
 .menu__plat:hover .menu__plat__check {
   display: block;
   transform: scaleX(1);
   width: 60px;
 }
-.menu__plat:hover .--spin {
+.menu__plat:hover .menu__plat__check--spin {
   transform: rotate(0deg);
 }
 .menu__button {
