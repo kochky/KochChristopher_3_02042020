@@ -61,6 +61,11 @@ span {
   color: white;
 }
 
+.--spin {
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+}
+
 .ligne {
   width: 40px;
   height: 3px;
@@ -498,6 +503,50 @@ span {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  opacity: 0;
+  animation: apparition 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    bottom: -10px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+.menu__plat--1 {
+  animation-delay: 100ms;
+}
+.menu__plat--2 {
+  animation-delay: 200ms;
+}
+.menu__plat--3 {
+  animation-delay: 300ms;
+}
+.menu__plat--4 {
+  animation-delay: 400ms;
+}
+.menu__plat--5 {
+  animation-delay: 500ms;
+}
+.menu__plat--6 {
+  animation-delay: 600ms;
+}
+.menu__plat--7 {
+  animation-delay: 700ms;
+}
+.menu__plat--8 {
+  animation-delay: 800ms;
+}
+.menu__plat--9 {
+  animation-delay: 900ms;
+}
+.menu__plat--10 {
+  animation-delay: 1000ms;
 }
 .menu__plat__div {
   height: 70px;
@@ -532,14 +581,22 @@ span {
 .menu__plat__check {
   height: 70px;
   background-color: #99E2D0;
-  width: 60px;
+  width: 0px;
   border-radius: 0 15px 15px 0;
-  justify-content: center;
-  align-items: center;
-  display: none;
+  line-height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 500ms;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
 }
 .menu__plat:hover .menu__plat__check {
-  display: flex;
+  display: block;
+  transform: scaleX(1);
+  width: 60px;
+}
+.menu__plat:hover .--spin {
+  transform: rotate(0deg);
 }
 .menu__button {
   display: block;
