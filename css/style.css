@@ -245,10 +245,16 @@ span {
   flex-wrap: wrap;
   padding-top: 0rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .fonctionnement {
+    display: block;
+  }
+}
 .fonctionnement__h1 {
   margin-bottom: 2rem;
   margin-right: 5rem;
   margin-left: 2rem;
+  width: 100%;
 }
 .fonctionnement__list {
   background-color: #f6f6f6;
@@ -262,6 +268,11 @@ span {
   width: 325px;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__list {
+    grid-row: 2;
+  }
 }
 .fonctionnement__list__p {
   font-weight: 900;
@@ -396,8 +407,14 @@ span {
 }
 .footer__ul {
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  /*display:flex;
+  flex-wrap:wrap;*/
+}
+@media screen and (min-width: 426px) {
+  .footer__ul {
+    display: flex;
+    justify-content: center;
+  }
 }
 .footer__logo {
   font-size: 1.25rem;
@@ -409,7 +426,7 @@ span {
 }
 .footer__ul__lien__li {
   margin-bottom: 0.75rem;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 #restaurant_lapalettedugout {

@@ -166,8 +166,6 @@ span {
     transform: rotate(360deg);
   }
 }
-
-
     
 /* fin animation*/
 
@@ -243,11 +241,16 @@ height:1.5rem;
     display:flex;
     flex-wrap: wrap;
     padding-top:0rem;
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        display:block;
+    }
 
         &__h1 {
             margin-bottom:2rem;
             margin-right:5rem;
             margin-left:2rem;
+            width:100%;
+
         }
         &__list {
             background-color: #f6f6f6;
@@ -261,6 +264,10 @@ height:1.5rem;
             width:325px;
             margin-right: 1.5rem;
             margin-left:1.5rem;
+            @media screen and (min-width:768px) {
+           
+                grid-row: 2;
+            }
             &__p{
                 font-weight: 900;
             }
@@ -403,10 +410,18 @@ height:1.5rem;
     display:flex;
     flex-direction: column;
     
+    
         &__ul {
             padding:0;
-            display:flex;
-            flex-wrap:wrap;
+            /*display:flex;
+            flex-wrap:wrap;*/
+            @media screen and (min-width:426px){
+                display:flex;
+                justify-content: center;
+
+
+
+            }
         
             
         }
@@ -421,7 +436,7 @@ height:1.5rem;
 
             &__li {
                 margin-bottom:0.75rem;
-                margin-right:100px;
+                margin-right:50px;
             }
         
         }
