@@ -11,9 +11,7 @@ body {
     margin:0 auto;
     padding:0;
     font-size:100%;
-    @media screen and (min-width:769px){
-        width:50%;
-    }
+    
     
 }
 
@@ -228,11 +226,8 @@ height:1.5rem;
 .fonctionnement {
     display:flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     padding-top:0rem;
-    @media screen and (min-width:768px) and (max-width:1023px) {
-        display:block;
-    }
-
         &__h1 {
             margin-bottom:2rem;
             margin-right:5rem;
@@ -292,14 +287,14 @@ height:1.5rem;
         }
 }
 
-
 .restaurants {
+    width:100%;
     margin-top:2rem;
     padding:2rem 1.5rem 3rem 1.5rem;
     background-color: #f6f6f6 ;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     &__titre {
         width:100%
     }
@@ -312,6 +307,7 @@ height:1.5rem;
         height:250px;
         border-radius: 15px;
         margin-bottom: 2rem;
+    
         
         &__nouveau {
             color:#008766;
@@ -397,6 +393,7 @@ height:1.5rem;
     padding-bottom:1.25rem;
     display:flex;
     flex-direction: column;
+    width:100%;
     
     
         &__ul {
@@ -405,7 +402,9 @@ height:1.5rem;
             flex-wrap:wrap;*/
             @media screen and (min-width:426px){
                 display:flex;
-                justify-content: center;
+                justify-content: space-around;
+                width:75%;
+                margin:auto;
 
 
 
@@ -486,7 +485,8 @@ height:1.5rem;
     &__cat {
         box-sizing: border-box;
         line-height: 0px;
-        margin:30px 1440px 14px 20px;
+        margin:30px 0px 14px 20px;
+        width:100%;
     } 
     
     &__plat {
@@ -584,4 +584,6 @@ height:1.5rem;
 .espace_menu {
     display:flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    
 }

@@ -5,11 +5,6 @@ body {
   padding: 0;
   font-size: 100%;
 }
-@media screen and (min-width: 769px) {
-  body {
-    width: 50%;
-  }
-}
 
 a {
   text-decoration: none;
@@ -227,12 +222,8 @@ span {
 .fonctionnement {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   padding-top: 0rem;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .fonctionnement {
-    display: block;
-  }
 }
 .fonctionnement__h1 {
   margin-bottom: 2rem;
@@ -288,12 +279,13 @@ span {
 }
 
 .restaurants {
+  width: 100%;
   margin-top: 2rem;
   padding: 2rem 1.5rem 3rem 1.5rem;
   background-color: #f6f6f6;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .restaurants__titre {
   width: 100%;
@@ -388,6 +380,7 @@ span {
   padding-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .footer__ul {
   padding: 0;
@@ -397,7 +390,9 @@ span {
 @media screen and (min-width: 426px) {
   .footer__ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    width: 75%;
+    margin: auto;
   }
 }
 .footer__logo {
@@ -470,7 +465,8 @@ span {
 .menu__cat {
   box-sizing: border-box;
   line-height: 0px;
-  margin: 30px 1440px 14px 20px;
+  margin: 30px 0px 14px 20px;
+  width: 100%;
 }
 .menu__plat {
   box-sizing: border-box;
@@ -592,6 +588,7 @@ span {
 .espace_menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style.css.map */
