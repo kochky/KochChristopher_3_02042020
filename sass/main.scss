@@ -11,8 +11,8 @@ body {
     margin:0 auto;
     padding:0;
     font-size:100%;
-    
-    
+    width:100%;
+    margin:auto;
 }
 
 a {
@@ -290,7 +290,7 @@ height:1.5rem;
 .restaurants {
     width:100%;
     margin-top:2rem;
-    padding:2rem 1.5rem 3rem 1.5rem;
+    padding:2rem 0rem 3rem 0rem;
     background-color: #f6f6f6 ;
     display:flex;
     flex-wrap: wrap;
@@ -388,7 +388,7 @@ height:1.5rem;
 .footer {
     background-color:#353535;
     color:white;
-    padding-left:1.25rem;
+    
     padding-top:0.5rem;
     padding-bottom:1.25rem;
     display:flex;
@@ -398,6 +398,7 @@ height:1.5rem;
     
         &__ul {
             padding:0;
+            margin-left:1.25rem;
             /*display:flex;
             flex-wrap:wrap;*/
             @media screen and (min-width:426px){
@@ -417,6 +418,7 @@ height:1.5rem;
             font-size: 1.25rem;
             font-family: $font-title;
             height:1.5rem;
+            margin-left:1.25rem;
         }
         &__ul__lien {
             color:white;

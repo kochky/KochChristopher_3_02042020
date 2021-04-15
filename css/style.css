@@ -4,6 +4,8 @@ body {
   margin: 0 auto;
   padding: 0;
   font-size: 100%;
+  width: 100%;
+  margin: auto;
 }
 
 a {
@@ -281,7 +283,7 @@ span {
 .restaurants {
   width: 100%;
   margin-top: 2rem;
-  padding: 2rem 1.5rem 3rem 1.5rem;
+  padding: 2rem 0rem 3rem 0rem;
   background-color: #f6f6f6;
   display: flex;
   flex-wrap: wrap;
@@ -375,7 +377,6 @@ span {
 .footer {
   background-color: #353535;
   color: white;
-  padding-left: 1.25rem;
   padding-top: 0.5rem;
   padding-bottom: 1.25rem;
   display: flex;
@@ -384,6 +385,7 @@ span {
 }
 .footer__ul {
   padding: 0;
+  margin-left: 1.25rem;
   /*display:flex;
   flex-wrap:wrap;*/
 }
@@ -399,6 +401,7 @@ span {
   font-size: 1.25rem;
   font-family: "Shrikhand", cursive;
   height: 1.5rem;
+  margin-left: 1.25rem;
 }
 .footer__ul__lien {
   color: white;
