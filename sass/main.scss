@@ -73,7 +73,7 @@ span {
 
 
 
-/*Chargement à l'arrivée de la page web*/
+/*Spin loading animation*/
 .chargement {
     display:none;
     @media screen and (max-width:768px) {
@@ -153,7 +153,7 @@ span {
   }
 }
     
-/* fin animation*/
+/* Animation end*/
 
 
 .header {
@@ -208,7 +208,7 @@ height:1.5rem;
             height:2.5rem;
             
         }
-        &__ville {
+        &__city {
             width:100%;
             display:flex;
             justify-content: center;
@@ -228,28 +228,29 @@ height:1.5rem;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top:0rem;
+   
         &__h1 {
             margin-bottom:2rem;
             margin-right:5rem;
             margin-left:2rem;
             width:100%;
-
         }
         &__list {
             background-color: #f6f6f6;
             display:flex;
             align-items: center;
-            height:4.5rem;
-            position:relative;
+            height:4.5rem;       
             border-radius:1rem;
             margin-bottom:1.5rem;
             box-shadow: 0rem 0.1rem 0.5rem lightgrey;
             width:325px;
+            max-width:325px;
+            
             margin-right: 1.5rem;
             margin-left:1.5rem;
-            @media screen and (min-width:768px) {
-           
-                grid-row: 2;
+            @media screen and (min-width:640px) {
+                flex:1 1 0;
+                
             }
             &__p{
                 font-weight: 900;
@@ -258,7 +259,7 @@ height:1.5rem;
                 background-color:#f5edff ;
             }
 
-            &__étape {
+            &__step{
                 margin-right:1rem;
                 background-color: $color-primary;
                 height:1.5rem;
@@ -269,8 +270,7 @@ height:1.5rem;
                 align-items: center;
                 color:white;
                 position:relative;
-                left:-0.75rem
-                 
+                left:-0.75rem;    
             }
 
             &__logo {
@@ -289,17 +289,21 @@ height:1.5rem;
 
 .restaurants {
     width:100%;
+    box-sizing: border-box;
     margin-top:2rem;
-    padding:2rem 0rem 3rem 0rem;
+    padding:2rem 0rem 3rem 7%;
     background-color: #f6f6f6 ;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    &__titre {
+    &__flex {
+        flex:1
+    }
+    &__title {
         width:100%;
         margin-left:2rem;
     }
-    &__présentation {
+    &__presentation {
         display:flex;
         flex-direction: column;
         justify-content: space-between;
@@ -310,7 +314,7 @@ height:1.5rem;
         margin-bottom: 2rem;
     
         
-        &__nouveau {
+        &__new{
             color:#008766;
             background-color: $color-tertiary;
             width:min-content;
@@ -322,7 +326,7 @@ height:1.5rem;
             margin-right:10px;
         }
 
-        &__nom{
+        &__name{
         
             background-color: white;
             width:335px;
@@ -332,21 +336,21 @@ height:1.5rem;
             align-items: center;
             border-radius: 0 0 15px 15px;
             margin-bottom:-1px;
-            &__texte {
+            &__text {
                 height:75px;
                 padding-left:15px;
                 padding-top:0px;
                 line-height: 10px;   
             }
-            &__texte + div{
+            &__text + div{
               margin-right:45px;  
             }
-            &--coeur_vide {
+            &--empty_heart {
                 position:absolute;
                 z-index:2; 
                 top:-10px;
                          
-                &:hover + .coeur_rempli {
+                &:hover + .full_heart {
                     opacity:1
                 }
             }
@@ -354,7 +358,7 @@ height:1.5rem;
     }
 }
 
-.coeur_rempli {
+.full_heart {
     position:absolute;
     color:$color-secondary;
     opacity:0;
@@ -363,33 +367,32 @@ height:1.5rem;
     top:-10px; 
     
 }
-.logo_coeur {
+.logo_heart {
     position:relative;
     
 }
 
 
 #lapalettedugoût {
-    background: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-size: cover;
 }
 #lanoteenchantée {
-    background: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     background-size: cover;
 }
 #àlafrançaise {
-    background:url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background:url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     background-size: cover;
 }
 #ledélicedessens {
-    background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     background-size: cover;
 }
 
 .footer {
     background-color:#353535;
     color:white;
-    
     padding-top:0.5rem;
     padding-bottom:1.25rem;
     display:flex;
@@ -407,12 +410,7 @@ height:1.5rem;
                 justify-content: space-around;
                 width:75%;
                 margin:auto;
-
-
-
             }
-        
-            
         }
         &__logo {
     
@@ -433,14 +431,14 @@ height:1.5rem;
 }
 
 #restaurant_lapalettedugout{
-    background:url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat;
+    background:url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat;
     width:100%;
     background-size:contain;
     background-position:top;
     padding-top:220px;
 }
 #restaurant_lanoteenchantée{
-    background:url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat;
+    background:url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat;
     width:100%;
     background-size:contain;
     background-position:top;
@@ -448,7 +446,7 @@ height:1.5rem;
 
 }
 #restaurant_àlafrançaise {
-    background:url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat;
+    background:url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat;
     width:100%;
     background-size:contain;
     background-position:top;
@@ -456,7 +454,7 @@ height:1.5rem;
 
 }
 #restaurant_ledélicedessens {
-    background:url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat;
+    background:url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat;
     width:100%;
     background-size:contain;
     background-position:top;
@@ -473,7 +471,7 @@ height:1.5rem;
     border-radius: 30px 30px 0 0;
     padding-bottom:60px;
       
-    &__titre {
+    &__title {
         box-sizing: border-box;
         width:355px;
         display:flex;
@@ -492,10 +490,14 @@ height:1.5rem;
         width:100%;
     } 
     
-    &__plat {
+    &__dish {
+        flex:1;
         box-sizing: border-box;
         margin: 0px 15px 15px 10px;
         width:350px;
+        min-width:350px;
+        max-width: 450px;
+        flex:1 1 0;
         background-color: white;
         border-radius: 15px;
         box-shadow: 0rem 0.1rem 0.5rem lightgrey;
@@ -530,7 +532,7 @@ height:1.5rem;
                 white-space: nowrap;
                 overflow: hidden;
             }
-            &__nom {
+            &__name {
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
@@ -542,7 +544,7 @@ height:1.5rem;
             }
         }
 
-        &__prix { 
+        &__price { 
             width:70px;
             padding: 40px 0px 0 0px;
             text-align: center;
@@ -587,6 +589,9 @@ height:1.5rem;
 .espace_menu {
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    @media screen and (min-width:1440px) {
+        justify-content: space-around;
+        
+    }
     
 }
