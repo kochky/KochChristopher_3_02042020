@@ -1,0 +1,42 @@
+
+
+
+.footer {
+    background-color:#353535;
+    color:white;
+    padding-top:0.5rem;
+    padding-bottom:1.25rem;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    
+    
+        &__ul {
+            padding:0;
+            margin-left:1.25rem;
+            /*display:flex;
+            flex-wrap:wrap;*/
+            @media screen and (min-width:426px){
+                display:flex;
+                justify-content: space-around;
+                width:75%;
+                margin:auto;
+            }
+        }
+        &__logo {
+    
+            font-size: 1.25rem;
+            font-family: $font-title;
+            height:1.5rem;
+            margin-left:1.25rem;
+        }
+        &__ul__lien {
+            color:white;
+
+            &__li {
+                margin-bottom:0.75rem;
+                margin-right:50px;
+            }
+        
+        }
+}

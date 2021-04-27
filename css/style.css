@@ -6,6 +6,7 @@ body {
   font-size: 100%;
   width: 100%;
   margin: auto;
+  min-width: 375px;
 }
 
 a {
@@ -34,6 +35,10 @@ h3 {
   font-weight: 900;
 }
 
+span {
+  font-weight: 900;
+}
+
 button {
   border-radius: 2rem;
   height: 2.5rem;
@@ -49,22 +54,6 @@ button {
 button:hover {
   background: linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
   box-shadow: 1px 10px 28px 1px rgba(0, 0, 0, 0.3);
-}
-
-span {
-  font-weight: 900;
-}
-
-.white {
-  color: white;
-}
-
-.ligne {
-  width: 40px;
-  height: 3px;
-  background-color: #99E2D0;
-  border: none;
-  margin-left: 0;
 }
 
 /*Spin loading animation*/
@@ -160,24 +149,6 @@ span {
   }
 }
 /* Animation end*/
-.header {
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.header__flèche {
-  margin-left: 25px;
-  margin-right: 65px;
-}
-
-.logo {
-  text-align: center;
-  font-size: 1.5rem;
-  font-family: "Shrikhand", cursive;
-  height: 1.5rem;
-}
-
 .location {
   display: flex;
   flex-direction: column;
@@ -213,12 +184,27 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eaeaea;
   background: linear-gradient(to top, #eaeaea, 95%, #cfcfcf);
+  margin: auto;
 }
-.location__city__p {
+.location__city__input {
   margin-left: 1rem;
   font-weight: 700;
+  width: 10px;
+  border: none;
+  font-size: 16px;
+  line-height: 50px;
+  background: linear-gradient(to top, #eaeaea, 95%, #cfcfcf);
+  width: 115px;
+}
+.location__city__input::placeholder {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-weight: 700;
+  border: none;
+}
+.location__city__input:focus {
+  outline: none;
 }
 
 .fonctionnement {
@@ -379,43 +365,6 @@ span {
   background-size: cover;
 }
 
-.footer {
-  background-color: #353535;
-  color: white;
-  padding-top: 0.5rem;
-  padding-bottom: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.footer__ul {
-  padding: 0;
-  margin-left: 1.25rem;
-  /*display:flex;
-  flex-wrap:wrap;*/
-}
-@media screen and (min-width: 426px) {
-  .footer__ul {
-    display: flex;
-    justify-content: space-around;
-    width: 75%;
-    margin: auto;
-  }
-}
-.footer__logo {
-  font-size: 1.25rem;
-  font-family: "Shrikhand", cursive;
-  height: 1.5rem;
-  margin-left: 1.25rem;
-}
-.footer__ul__lien {
-  color: white;
-}
-.footer__ul__lien__li {
-  margin-bottom: 0.75rem;
-  margin-right: 50px;
-}
-
 #restaurant_lapalettedugout {
   background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat;
   width: 100%;
@@ -450,6 +399,18 @@ span {
 
 .logo_coeur {
   position: relative;
+}
+
+.ligne {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  border: none;
+  margin-left: 0;
+}
+
+.white {
+  color: white;
 }
 
 .menu {
@@ -498,7 +459,7 @@ span {
 @keyframes apparition {
   0% {
     opacity: 0;
-    bottom: -10px;
+    bottom: -5px;
   }
   100% {
     opacity: 1;
@@ -506,34 +467,34 @@ span {
   }
 }
 .menu__dish--1 {
-  animation-delay: 100ms;
-}
-.menu__dish--2 {
-  animation-delay: 200ms;
-}
-.menu__dish--3 {
   animation-delay: 300ms;
 }
-.menu__dish--4 {
-  animation-delay: 400ms;
-}
-.menu__dish--5 {
-  animation-delay: 500ms;
-}
-.menu__dish--6 {
+.menu__dish--2 {
   animation-delay: 600ms;
 }
-.menu__dish--7 {
-  animation-delay: 700ms;
-}
-.menu__dish--8 {
-  animation-delay: 800ms;
-}
-.menu__dish--9 {
+.menu__dish--3 {
   animation-delay: 900ms;
 }
+.menu__dish--4 {
+  animation-delay: 1200ms;
+}
+.menu__dish--5 {
+  animation-delay: 1500ms;
+}
+.menu__dish--6 {
+  animation-delay: 1800ms;
+}
+.menu__dish--7 {
+  animation-delay: 2100ms;
+}
+.menu__dish--8 {
+  animation-delay: 2400ms;
+}
+.menu__dish--9 {
+  animation-delay: 2700ms;
+}
 .menu__dish--10 {
-  animation-delay: 1000ms;
+  animation-delay: 3000ms;
 }
 .menu__dish__div {
   height: 70px;
@@ -605,6 +566,61 @@ span {
   .espace_menu {
     justify-content: space-around;
   }
+}
+
+.header {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header__flèche {
+  margin-left: 25px;
+  margin-right: 65px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Shrikhand", cursive;
+  height: 1.5rem;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.footer__ul {
+  padding: 0;
+  margin-left: 1.25rem;
+  /*display:flex;
+  flex-wrap:wrap;*/
+}
+@media screen and (min-width: 426px) {
+  .footer__ul {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: auto;
+  }
+}
+.footer__logo {
+  font-size: 1.25rem;
+  font-family: "Shrikhand", cursive;
+  height: 1.5rem;
+  margin-left: 1.25rem;
+}
+.footer__ul__lien {
+  color: white;
+}
+.footer__ul__lien__li {
+  margin-bottom: 0.75rem;
+  margin-right: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

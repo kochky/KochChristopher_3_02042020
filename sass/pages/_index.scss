@@ -1,0 +1,316 @@
+
+
+/*Spin loading animation*/
+.chargement {
+    display:none;
+    @media screen and (max-width:768px) {
+    display:block;
+     height:100vh;
+     width:100%;
+    background-color:$color-tertiary;
+    z-index:3;
+    top:0px;
+    position:absolute;
+    animation: clear 3s;
+    animation-fill-mode:forwards;
+    
+    }
+}
+@keyframes clear {
+    0% {opacity:1;}
+    99% {opacity:1;}
+    100% {opacity:0;}
+
+}
+.animation {
+    color:white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: $font-title;
+    margin:0 auto;
+    margin-top:30vh;
+}
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #ffffff;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 155px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: $color-tertiary;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em; 
+  transform-origin: 5.1em 5.1em;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: $color-tertiary;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  transform-origin: 0.1em 5.1em;
+  animation: load2 2s infinite ease;
+}
+@keyframes load2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+    
+/* Animation end*/
+
+
+
+
+.location {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding-bottom:3rem;
+    margin-bottom:2rem;
+    
+    
+        &__h1 {
+            width:65%;
+            padding-top:1.5rem;
+            height:2rem;
+            text-align: center;
+        }
+        &__p {
+            margin:25px 5px;
+            width:75%;
+            text-align: center;
+            margin-bottom:2rem;
+            color:#7d7d7d;
+        }
+        &__button {
+            border-radius: 2rem;
+            height:2.5rem;
+            background: linear-gradient($color-secondary,$color-primary);
+            color:white;
+            border:none;
+            padding:0rem 1.5rem;
+            height:2.5rem;
+            
+        }
+        &__city {
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top, #eaeaea,95%, #cfcfcf);
+            margin:auto;
+    
+            &__input {
+             margin-left:1rem;
+             font-weight: 700;
+             width:10px;
+             
+             border:none;
+             font-size: 16px;
+             line-height: 50px;
+             background: linear-gradient(to top, #eaeaea,95%, #cfcfcf);
+             width:115px;
+             &::placeholder {
+                font-family: $font-primary;
+                color:black;
+                font-weight: 700;
+                border:none;
+             }
+             &:focus {
+                 outline:none;
+             }
+            }
+        }
+}
+
+.fonctionnement {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top:0rem;
+   
+        &__h1 {
+            margin-bottom:2rem;
+            margin-right:5rem;
+            margin-left:2rem;
+            width:100%;
+        }
+        &__list {
+            background-color: #f6f6f6;
+            display:flex;
+            align-items: center;
+            height:4.5rem;       
+            border-radius:1rem;
+            margin-bottom:1.5rem;
+            box-shadow: 0rem 0.1rem 0.5rem lightgrey;
+            width:325px;
+            max-width:325px;
+            
+            margin-right: 1.5rem;
+            margin-left:1.5rem;
+            @media screen and (min-width:640px) {
+                flex:1 1 0;
+                
+            }
+            &__p{
+                font-weight: 900;
+            }
+            &--fondcolor {
+                background-color:#f5edff ;
+            }
+
+            &__step{
+                margin-right:1rem;
+                background-color: $color-primary;
+                height:1.5rem;
+                border-radius:1.5rem;
+                width:1.5rem;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+                position:relative;
+                left:-0.75rem;    
+            }
+
+            &__logo {
+                margin-right:1rem;
+                
+                &--gris{
+                    color: #7e7e7e;
+                }
+                &--primarycolor {
+                    color:$color-primary
+                } 
+            
+            }
+        }
+}
+
+.restaurants {
+    width:100%;
+    box-sizing: border-box;
+    margin-top:2rem;
+    padding:2rem 0rem 3rem 7%;
+    background-color: #f6f6f6 ;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__flex {
+        flex:1
+    }
+    &__title {
+        width:100%;
+        margin-left:2rem;
+    }
+    &__presentation {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width:335px;
+        height:250px;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+    
+        
+        &__new{
+            color:#008766;
+            background-color: $color-tertiary;
+            width:min-content;
+            width:80px;
+            height:30px;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            margin-right:10px;
+        }
+
+        &__name{
+        
+            background-color: white;
+            width:335px;
+            height:75px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 0 15px 15px;
+            margin-bottom:-1px;
+            &__text {
+                height:75px;
+                padding-left:15px;
+                padding-top:0px;
+                line-height: 10px;   
+            }
+            &__text + div{
+              margin-right:45px;  
+            }
+            &--empty_heart {
+                position:absolute;
+                z-index:2; 
+                top:-10px;
+                         
+                &:hover + .full_heart {
+                    opacity:1
+                }
+            }
+        }
+    }
+}
+
+.full_heart {
+    position:absolute;
+    color:$color-secondary;
+    opacity:0;
+    transition:opacity 500ms;
+    z-index:1;
+    top:-10px; 
+    
+}
+.logo_heart {
+    position:relative;
+    
+}
+
+
+#lapalettedugoût {
+    background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: cover;
+}
+#lanoteenchantée {
+    background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-size: cover;
+}
+#àlafrançaise {
+    background:url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-size: cover;
+}
+#ledélicedessens {
+    background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-size: cover;
+}

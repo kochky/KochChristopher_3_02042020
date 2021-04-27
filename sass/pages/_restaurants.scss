@@ -1,0 +1,177 @@
+#restaurant_lapalettedugout{
+    background:url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat;
+    width:100%;
+    background-size:100%;
+    background-position:top;
+    padding-top:220px;
+}
+#restaurant_lanoteenchantée{
+    background:url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat;
+    width:100%;
+    background-size:100%;
+    background-position:top;
+    padding-top:220px;
+
+}
+#restaurant_àlafrançaise {
+    background:url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat;
+    width:100%;
+    background-size:100%;
+    background-position:top;
+    padding-top:220px;
+
+}
+#restaurant_ledélicedessens {
+    background:url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat;
+    width:100%;
+    background-size:100%;
+    background-position:top;
+    padding-top:220px;
+}
+.logo_coeur {
+    position:relative;
+}
+.ligne {
+    width:40px;
+    height:3px;
+    background-color:$color-tertiary;
+    border:none;
+    margin-left:0;
+     
+}
+.white {
+    color:white;
+}
+
+.menu {
+    box-sizing: border-box;
+    width:100%;
+    background-color:#f6f6f6;
+    border-radius: 30px 30px 0 0;
+    padding-bottom:60px;
+      
+    &__title {
+        box-sizing: border-box;
+        width:355px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+        font-family: $font-title;
+        padding: 0 40px 0 15px;
+        padding-left:20px;   
+    }
+
+    &__cat {
+        box-sizing: border-box;
+        line-height: 0px;
+        margin:30px 0px 14px 20px;
+        width:100%;
+    } 
+    
+    &__dish {
+        flex:1;
+        box-sizing: border-box;
+        margin: 0px 15px 15px 10px;
+        width:350px;
+        min-width:350px;
+        max-width: 450px;
+        flex:1 1 0;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0rem 0.1rem 0.5rem lightgrey;
+        display:flex;
+        justify-content: space-between;
+        cursor:pointer;
+        opacity:0;
+        animation: apparition 1s;
+        animation-fill-mode:forwards;
+        position: relative;
+        @keyframes apparition {
+            0% {opacity:0; bottom:-5px}
+            100% {opacity:1; bottom:0px}
+        }
+        @for $i from 1 through 10 {
+            &--#{$i} {
+                animation-delay: 300ms * $i;
+             }
+        }
+           
+        &__div {
+            height:70px;
+            line-height: 10px;
+            margin-left:10px;
+            width:210px;
+            flex-grow:2;
+            &__description {
+                padding-top:3px;
+                display:block;
+                height:20px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            &__name {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                display:block;
+                height:20px;
+                padding:0;
+                margin:10px 0 0 0;
+                line-height: normal;
+            }
+        }
+
+        &__price { 
+            width:70px;
+            padding: 40px 0px 0 0px;
+            text-align: center;
+           
+        }
+        &__check {
+            height:70px;
+            background-color: $color-tertiary;
+            width:0px;
+            border-radius: 0 15px 15px 0;
+            line-height: 70px;
+            text-align: center;
+            vertical-align: middle;
+            transition: all 500ms;
+            transform: scaleX(0);
+            transform-origin: 100% 50%;
+            &--spin {
+                    transform: rotate(-360deg);
+                    transition: transform 500ms ease-in-out
+               
+            }
+        }
+        &:hover &__check {
+            display:block;
+            transform: scaleX(1);
+            width:60px;
+            
+            
+        }
+        &:hover &__check--spin {
+            transform: rotate(0deg)
+        }
+    }
+    &__button {
+        display:block;
+        margin:auto;
+        width:185px;
+        height:50px;
+        margin-top:30px;    
+    }
+}
+
+.espace_menu {
+    display:flex;
+    flex-wrap: wrap;
+    @media screen and (min-width:1440px) {
+        justify-content: space-around;
+        
+    }
+    
+}
