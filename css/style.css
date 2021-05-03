@@ -590,6 +590,7 @@ button:hover {
 }
 
 .footer {
+  box-sizing: border-box;
   background-color: #353535;
   color: white;
   padding-top: 0.5rem;
@@ -604,7 +605,7 @@ button:hover {
   /*display:flex;
   flex-wrap:wrap;*/
 }
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 480px) {
   .footer__ul {
     display: flex;
     justify-content: space-around;
