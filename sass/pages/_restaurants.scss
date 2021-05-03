@@ -88,8 +88,8 @@
         animation-fill-mode:forwards;
         position: relative;
         @keyframes apparition {
-            0% {opacity:0; bottom:-5px}
-            100% {opacity:1; bottom:0px}
+            0% {opacity:0; transform:translateY(10px)}
+            100% {opacity:1; transform:translateY(0px)}
         }
         @for $i from 1 through 10 {
             &--#{$i} {

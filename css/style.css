@@ -462,11 +462,11 @@ button:hover {
 @keyframes apparition {
   0% {
     opacity: 0;
-    bottom: -5px;
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
-    bottom: 0px;
+    transform: translateY(0px);
   }
 }
 .menu__dish--1 {
